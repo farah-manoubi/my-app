@@ -1,0 +1,34 @@
+.headerContainer{
+    margin: 40px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerContainer div{
+    width: 50%;
+}
+
+.headerContainer nav{
+    width: 50%;
+}
+.headerContainer nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.headerContainer nav ul li{
+    margin-left:  50px;
+}
+.headerContainer nav ul li a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF6060;
+    text-decoration: none;    
+}
+
+.headerContainer nav ul li a:hover{
+    border-bottom: solid #FF6060 1px;
+}
