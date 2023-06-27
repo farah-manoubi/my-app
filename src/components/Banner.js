@@ -1,18 +1,16 @@
 import '../styles/Banner.css'
 import logo from '../assets/logo.png'
 
-function Banner() {
+export const Banner = () =>{
     return (
         <div className="headerContainer">
             <div><img src={logo} alt='Logo du site web'/></div>
             <nav>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">A propos</a></li>
+                    <li>Accueil</li>
+                    <li>A propos</li>
                 </ul>
             </nav>
         </div>
     ) 
 }
-
-export default Banner
