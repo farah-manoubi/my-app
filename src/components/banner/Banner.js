@@ -1,10 +1,10 @@
-import '../styles/Banner.css'
-import logo from '../assets/logo.png'
+import styles from "./banner.module.scss";
+
 
 export const Banner = () =>{
     return (
-        <div className="headerContainer">
-            <div><img src={logo} alt='Logo du site web'/></div>
+        <div className={styles.headerContainer}>
+            <div><img src="" alt='Logo du site web'/></div>
             <nav>
                 <ul>
                     <li>Accueil</li>
