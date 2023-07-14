@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
-import {Card} from "../../components/card/Card"
+import {Card} from "../../components/card/Card";
+import{Banner} from "../../components/banner/Banner"
 
 
 
@@ -44,6 +45,7 @@ export const Home = (props) =>{
 
     return (
         <>
+        <Banner />
         <div style ={mystyle}>{data.map(item =>
             <Link to={`/logement/${item.id}`} key={item.id} style ={styleLink}>
                 <Card 
