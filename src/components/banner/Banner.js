@@ -1,13 +1,13 @@
 import style from "./banner.module.scss"
-import banner from "../../assets/banner.png";
 
 
 
-export const Banner = () =>{
+
+export const Banner = (props) =>{
     return(
         <div className={style.container}>
-            <div className={style.container__image}><img src={banner} alt="banner"/></div>
-            <div className={style.container__texte}><p>Chez vous, partout et ailleurs</p></div>
+            <div className={style.container__image}><img src={props.icon} alt="banner"/></div>
+            <div className={style.container__texte}><p>{props.texte}</p></div>
         </div>
         
     )

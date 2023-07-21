@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import {Card} from "../../components/card/Card";
 import{Banner} from "../../components/banner/Banner";
-import style from "./home.module.scss"
+import style from "./home.module.scss";
+import banner from "../../assets/banner.png"
 
 
 
@@ -33,7 +34,7 @@ export const Home = (props) =>{
 
     return (
         <>
-        <Banner />
+        <Banner icon={banner} texte="Chez vous, partout et ailleurs"/>
         <div className ={style.mystyle}>{data.map(item =>
             <Link to={`/logement/${item.id}`} key={item.id} style ={styleLink}>
                 <Card 
