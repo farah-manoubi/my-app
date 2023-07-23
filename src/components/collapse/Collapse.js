@@ -16,7 +16,7 @@ export const Collapse = (props) =>{
                 <h2>{props.title}</h2>
                 <button className={style.titleContainer__arrow} onClick={arrow}><FontAwesomeIcon  icon={faAngleDown}/></button>
             </div>
-            <div className={open ? style.containerDisplay : style.container}>
+            <div className={open ? style.containerDisplay : style.containerHidden}>
                 <div className={style.content}> {props.children} </div>
             </div>
         </>
