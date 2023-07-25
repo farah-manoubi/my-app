@@ -49,3 +49,11 @@
         cursor: pointer;
     }
 }
+
+.rotation{
+    transform: rotate(180deg);
+}
+
+.fixe{
+    transform: rotate(0deg);
+}
