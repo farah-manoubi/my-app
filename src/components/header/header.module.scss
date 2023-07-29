@@ -53,7 +53,9 @@
                 @media screen and (max-width: 768px){
                     margin-left: 20px;
                 }
-                
+                a.active{
+                    text-decoration: underline #FF6060;
+                }
 
                 a{
                     font-family: "Montserrat";
@@ -63,9 +65,7 @@
                     color: #FF6060;
                     text-decoration: none;
             
-                    &:active{
-                        text-decoration: underline #FF6060;
-                    }
+                    
                    
         
                     @media screen and (max-width: 768px){
