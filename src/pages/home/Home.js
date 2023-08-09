@@ -27,7 +27,8 @@ export const Home = (props) =>{
           
             const response = await fetch(url);
             const json = await response.json();
-            setData(json);   
+            setData(json);  
+            
         };
         fetchData();
     }, []);
