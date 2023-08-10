@@ -16,13 +16,26 @@ export const Carrousel = ({slides}) =>{
         borderRadius: "15px"
     }
 
+    const previousSlide = () =>{
+        const firstSlide = currentIndex === 0;
+        const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+
+    };
+
+    const nextSlide = () =>{
+        const lastSlide = currentIndex === slides.length - 1;
+        const newIndex = lastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
     
     
     return (
         <>
             <div style={{height: "100%", position: "relative"}}>
-                <div className={style.chevronLeft}><FontAwesomeIcon icon={faChevronLeft} /></div>
-                <div className={style.chevronRight}><FontAwesomeIcon icon={faChevronRight} /></div>
+                <div className={style.chevronLeft} onClick={previousSlide}><FontAwesomeIcon icon={faChevronLeft} /></div>
+                <div className={style.chevronRight} onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></div>
                 <div style={styleSlides}></div>
             </div>
         </>

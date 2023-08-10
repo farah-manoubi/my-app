@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import style from "./logement.module.scss";
 import { Carrousel } from "../../components/carrousel/Carrousel";
+import { Collapse } from "../../components/collapse/Collapse";
 
 
 
@@ -27,10 +28,14 @@ export const Logement = () =>{
         };
         fetchData();
     }, [id, nav]);
+    
 
     return(
         <>
+      
+       
         {
+          
             data && (
             <>
                 <div className={style.containerCarrousel}>
@@ -46,6 +51,20 @@ export const Logement = () =>{
                         <img src={data.host.picture} alt="profil"/>
                     </div>
                 </div>  
+
+                <div className={style.containerLgmt}>
+                    <div style={{width: "50%"}}>
+                        <Collapse title="Description">
+                            <div style={{height: "170px"}}><p className={style.paragraph}>{data.description}</p></div>
+                        </Collapse> 
+                    </div>
+                    <div style={{width: "50%"}}>
+                        <Collapse title="Équipement">
+                        <div style={{height: "170px"}}><p className={style.equipmentStyle}>{data.equipments.map(equipment => <li key={equipment}>{equipment}</li>)}</p></div>
+                        </Collapse> 
+                    </div>
+                    
+                </div>
             </>
             )
         }

@@ -6,7 +6,7 @@ import style from "./about.module.scss"
 export const About = () =>{
     return(
         <>
-         <Banner icon={aboutBanner} texte="" />
+        <Banner icon={aboutBanner} texte="" />
         <div className={style.container}>
 
             <Collapse title="Fiabilité">
