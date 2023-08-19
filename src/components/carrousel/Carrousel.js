@@ -29,14 +29,15 @@ export const Carrousel = ({slides}) =>{
         setCurrentIndex(newIndex);
     };
 
-    
-    
+    const lengthSlide = slides.length;
+
     return (
         <>
             <div style={{height: "100%", position: "relative"}}>
-                <div className={style.chevronLeft} onClick={previousSlide}><FontAwesomeIcon icon={faChevronLeft} /></div>
-                <div className={style.chevronRight} onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></div>
+                { lengthSlide > 1 && (<div className={style.chevronLeft} onClick={previousSlide}><FontAwesomeIcon icon={faChevronLeft} /></div>)}
+                { lengthSlide > 1 && (<div className={style.chevronRight} onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></div>)}
                 <div style={styleSlides}></div>
+                <div className={style.countSlide}>{currentIndex + 1} / {lengthSlide}</div>
             </div>
         </>
     )

@@ -5,16 +5,12 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 768px){
-                            
-       margin-bottom: 20px;
-        
+    @media screen and (max-width: 768px){                   
+       margin-bottom: 20px;  
     }
     
     div{
         width: 50%;
-
-        
 
         img{
             @media screen and (max-width: 768px){
@@ -31,17 +27,11 @@
     nav{
         width: 50%;
 
-        
-
-
         ul{
             list-style-type: none;
             display: flex;
             justify-content: flex-end;
 
-
-
-            
             @media screen and (max-width: 768px){
                 margin: 0;
                 padding: 0 0 0 0;
@@ -53,9 +43,6 @@
                 @media screen and (max-width: 768px){
                     margin-left: 20px;
                 }
-                a.active{
-                    text-decoration: underline #FF6060;
-                }
 
                 a{
                     font-family: "Montserrat";
@@ -63,11 +50,7 @@
                     font-weight: 500;
                     font-size: 24px;
                     color: #FF6060;
-                    text-decoration: none;
-            
-                    
-                   
-        
+
                     @media screen and (max-width: 768px){
                         font-size: 14px;
                         text-transform: uppercase;
@@ -81,7 +64,12 @@
             }
         }
     }
+}
 
-   
+.active{
+    text-decoration: underline;
+}
+.inactive{
+    text-decoration: none;
 }
 

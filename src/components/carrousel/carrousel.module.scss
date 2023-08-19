@@ -7,6 +7,9 @@
     color: white;
     z-index: 1;
     cursor: pointer;
+    @media screen and (max-width: 768px){
+        font-size: 45px;
+    }
 
 }
 
@@ -19,4 +22,25 @@
     color: white;
     z-index: 1;
     cursor: pointer;
+    @media screen and (max-width: 768px){
+        font-size: 45px;
+    }
+}
+
+.countSlide{
+    position: absolute;
+    font-family: "Montserrat";
+    color: white;
+    font-weight: 500;
+    font-size: 23px;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    @media screen and (max-width: 768px){
+        display: none;
+       
+    }
+
 }

@@ -1,8 +1,5 @@
 import style from "./banner.module.scss"
 
-
-
-
 export const Banner = (props) =>{
     return(
         <div className={style.container}>

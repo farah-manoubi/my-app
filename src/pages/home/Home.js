@@ -13,14 +13,11 @@ export const Home = (props) =>{
         color: "inherit",
         fontWeight: "700",
         fontFamily: "Montserrat",
-        fontSize: "16px"
-        
-
+        fontSize: "16px" 
     }
 
     const [ data , setData ] = useState([]); 
     
-
     useEffect(() => {
         const url = "../data/jsonFile.json";
         const fetchData = async () => {
@@ -35,17 +32,15 @@ export const Home = (props) =>{
 
     return (
         <>
-        <Banner icon={banner} texte="Chez vous, partout et ailleurs"/>
-        <div className ={style.mystyle}>{data.map(item =>
-            <Link to={`/logement/${item.id}`} key={item.id} style ={styleLink}>
-                <Card 
-                    key={item.id}
-                    cover={item.cover}
-                    title={item.title}/>
-            </Link>)}
-        </div>
-       
-        </>
-        
+            <Banner icon={banner} texte="Chez vous, partout et ailleurs"/>
+            <div className ={style.mystyle}>{data.map(item =>
+                <Link to={`/logement/${item.id}`} key={item.id} style ={styleLink}>
+                    <Card 
+                        key={item.id}
+                        cover={item.cover}
+                        title={item.title}/>
+                </Link>)}
+            </div>
+        </> 
     )
 }

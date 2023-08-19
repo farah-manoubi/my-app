@@ -1,11 +1,19 @@
 .containerDescription{
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+ 
+    @media screen and (max-width: 768px){
+       flex-direction: column;
+       align-items: flex-start;
+    }
 
         .info{
             width: 80%;
+            
+        
+            @media screen and (max-width: 768px){
+                width: 100%;;
+            }
 
             p{
                 font-family: "Montserrat";
@@ -15,34 +23,118 @@
                 font-weight: 500;
                 font-size:30px;
                 margin-bottom: 0;
+                margin-top: 20px;
+
+            }
+
+            .containerTag{
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                
+   
+                ul{
+                    display: flex;
+                    list-style: none;
+                    flex-wrap: wrap;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    gap: 10px;
+                    width: 100%;
+
+                    @media screen and (max-width: 768px){
+                        margin-bottom: 16px;
+                    }
+                    
+            
+                        li{
+                            border: solid #FF6060;
+                            background-color: #FF6060;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: 500;
+                            width: 150px;
+                            height: 100%;
+                            border-radius: 10px;
+                            text-align: center;
+                            padding-bottom: 3px;
+            
+                            @media screen and (max-width: 768px){
+                               font-size: 12px;
+                            }
+                            
+            
+                        }
+                }
             }
         }
 
         .profile{
             display: flex;
-            justify-content: flex-end;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             width: 20%;
 
-            p{
-                color: #FF6060;
-                font-family: "Montserrat";
-                font-size: 18px;
-                font-weight: 500;
-                width: 100px;
-                text-align: right;
-                margin-right: 5px;
+            @media screen and (max-width: 768px){
+               flex-direction: row-reverse;
+               width: 100%;
+            }
+
+            .aboutMe{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                height: 100%;
+                align-items: flex-end;
+                
+                
+                @media screen and (max-width: 768px){
+                    width: 70%;
+                    
+                }
+
+                p{
+                    color: #FF6060;
+                    font-family: "Montserrat";
+                    font-size: 18px;
+                    font-weight: 500;
+                    width: 100px;
+                    text-align: right;
+                    margin-right: 5px;
+                }
+    
+    
+                img{
+                    border-radius: 50%;
+                    object-fit: contain;
+                    width: 70px;
+                    margin-right: 0;
+    
+                    @media screen and (max-width: 768px){
+                        width: 60px;
+                    
+                    }
+                }
 
             }
 
-
-            img{
-                border-radius: 50%;
-                object-fit: contain;
-                width: 70px;
-                margin-right: 0;
+            .starsContainer{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: flex-end;
+                justify-content: flex-end;
+                
+                @media screen and (max-width: 768px){
+                    width: 50%;
+                    margin-top: 0;
+                    justify-content: flex-start;
+                }
             }
-            
+
+           
+   
         }
 }
 
@@ -50,12 +142,41 @@
     width: 100%;
     height: 500px;
     margin: 0 auto;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 768px){
+        height: 400px;
+    }
 }
 
 .containerLgmt{
     width: 100%;
     display: flex;
     gap: 50px;
+
+    @media screen and (max-width: 768px){
+       flex-direction: column;
+       gap: 5px;
+    }
+
+        .widthClps{
+            width: 50%;
+
+            @media screen and (max-width: 768px){
+                width: 100%;
+             
+            }
+
+            .heightClps{
+                height: 170px;
+
+                @media screen and (max-width: 768px){
+                    height: 100%;
+                 
+                }
+
+            }
+        }
 }
 
 .paragraph{
@@ -77,6 +198,12 @@
         color: #FF6060;
         font-size: 17px;
         padding-bottom: 5px;
+
+        @media screen and (max-width: 768px){
+            font-size: 15px;
+           
+        }
         
     }
 }
+
