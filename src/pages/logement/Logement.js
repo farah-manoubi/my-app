@@ -20,7 +20,6 @@ export const Logement = () =>{
             const response = await fetch(url);
             const json = await response.json();
             const result = json.find(item => item.id === id);
-            console.log(result);
             if(!result){
                 nav("*");
             }
